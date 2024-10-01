@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+    html,body{
+        overflow-x: hidden
+    }
+    h1 , h2 {
+        @apply font-display font-semibold;
+    }
+    .container{
+        @apply px-6 py-12 max-w-7xl mt-[-350px] mx-auto lg:px-8;
+    }
+    .gradient-hover-outer{
+        @apply p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200
+    }
+    .gradient-hover-inner{
+        @apply  bg-slate-50 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50
+    }
+}
+/* npx tailwindcss -i ./style.css -o ./output.css --watch */
+/* mx-auto */
