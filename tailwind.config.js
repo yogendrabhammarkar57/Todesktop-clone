@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors:{
         'santy': '#3498db',
+        'magic': 'hsl(2, 100%, 89%)'
       },
       fontFamily:{
         'poppins': ['Poppins', 'sans-serif'],
