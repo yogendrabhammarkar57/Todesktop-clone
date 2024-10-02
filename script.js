@@ -53,3 +53,51 @@ dtElements.forEach(element=> {
         ddArrow.classList.toggle('-rotate-180');
     })
 })
+
+
+
+// pricing
+
+const monthlyButton = document.getElementById('monthly');
+const yearlyButton = document.getElementById('yearly');
+const slider = document.querySelector('.slider');
+
+const essentialPrice = document.querySelector('.essential-price');
+const professionalPrice = document.querySelector('.professional-price');
+
+// Prices for both plans
+const monthlyPrices = {
+    essential: "$120",
+    professional: "$300"
+};
+
+const yearlyPrices = {
+    essential: "$100",
+    professional: "$240"
+};
+
+// Event listener for Monthly Plan
+monthlyButton.addEventListener('click', () => {
+    monthlyButton.classList.add('active');
+    yearlyButton.classList.remove('active');
+
+    // Slide the slider to the left (start)
+    slider.style.transform = 'translateX(0)';
+
+    // Change prices to monthly
+    essentialPrice.textContent = monthlyPrices.essential;
+    professionalPrice.textContent = monthlyPrices.professional;
+});
+
+// Event listener for Yearly Plan
+yearlyButton.addEventListener('click', () => {
+    yearlyButton.classList.add('active');
+    monthlyButton.classList.remove('active');
+
+    // Slide the slider to the right (end)
+    slider.style.transform = 'translateX(100%)';
+
+    // Change prices to yearly
+    essentialPrice.textContent = yearlyPrices.essential;
+    professionalPrice.textContent = yearlyPrices.professional;
+});

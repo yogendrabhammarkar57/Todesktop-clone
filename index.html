@@ -540,8 +540,16 @@
                 </div>
              </div>
              <!-- Pricing -->
-             <div id="pricing" class="container mt-4">
+
+             <!-- <div id="pricing" class="container mt-4">
                 <h2 class="text-5xl leading-normal sm:font-semibold max-w-2xl">Choose a plan that fits your needs</h2>
+                <div class="pricing-toggle">
+                    <div class="toggle-container">
+                        <div class="slider"></div>
+                        <button id="monthly" class="toggle-btn active">Monthly</button>
+                        <button id="yearly" class="toggle-btn">Yearly <span class="discount">-20%</span></button>
+                    </div>
+                </div>
                 <div class="mt-6 gap-6 flex flex-col lg:flex-row">
                     <div class="bg-slate-50 border flex-1 border-xl pt-12 pb-8 px-5 flex flex-col gap-4 rounded-2xl">
                         <h3 class="text-4xl font-semibold">Free</h3>
@@ -628,7 +636,122 @@
                         </button>
                     </div>
                 </div>
-             </div>
+             </div> -->
+
+             <div id="pricing" class="container mt-4">
+                <h2 class="text-5xl leading-normal sm:font-semibold max-w-2xl">
+                    Choose a plan that fits your needs
+                </h2>
+                
+                <!-- Pricing Toggle -->
+                <div class="pricing-toggle flex items-center justify-end my-6">
+                    <div class="toggle-container  relative flex items-center justify-center rounded-lg border border-gray-200 bg-gray-50 p-[3px]">
+                        <div class="slider absolute left-[3px] top-[3px] h-[calc(100%-6px)] w-[calc(50%-3px)] rounded-lg bg-white shadow-md transition-transform duration-300 ease-in-out"></div>
+                        <button id="monthly" class="toggle-btn active px-3 py-2 text-3.5 min-w-[180px] text-center relative z-10 transition-all duration-300 font-medium text-body-light-loud">
+                            Monthly
+                        </button>
+                        <button id="yearly" class="toggle-btn px-3 py-2 text-3.5 min-w-[180px] text-center relative z-10 transition-all duration-300 font-normal text-body-light-muted">
+                            Yearly <span class="discount pb-1 border bg-blue-200 px-4 py-1 rounded-2xl">-20%</span>
+                        </button>
+                        
+                    </div>
+                </div>
+            
+                <!-- Pricing Cards -->
+                <div class="mt-6 gap-6 flex flex-col lg:flex-row">
+                    <!-- Free Plan -->
+                    <div class="bg-slate-50 border flex-1 border-xl pt-12 pb-8 px-5 flex flex-col gap-4 rounded-2xl">
+                        <h3 class="text-4xl font-semibold">Free</h3>
+                        <p class="text-lg text-gray-800 font-poppins">
+                            For personal use or testing your app before deploying to customers.
+                        </p>
+                        <h6 class="uppercase">Key Features</h6>
+                        <ul ">
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">Free for personal use</p>
+                            </li>
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">Run app locally</p>
+                            </li>
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-xmark mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">No Code Signing</p>
+                            </li>
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-xmark mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">No Native Installers</p>
+                            </li>
+                        </ul>
+                        <button class="border border-gray-300 px-8 py-3 text-blue-700 hover:border-gray-400 rounded-xl font-medium">
+                            Get Started
+                        </button>
+                    </div>
+            
+                    <!-- Essential Plan -->
+                    <div class="bg-slate-50 border border-xl flex-1 pt-12 pb-8 px-5 flex flex-col gap-4 rounded-2xl">
+                        <h3 class="text-4xl font-semibold">Essential</h3>
+                        <p class="text-lg text-gray-800 font-poppins">For simple desktop apps.</p>
+                        <p class="text-2xl"><span class="font-semibold essential-price">$120</span>/month</p>
+                        <h6 class="uppercase">Key Features</h6>
+                        <ul >
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">Windows, Mac & Linux</p>
+                            </li>
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">Code Signing</p>
+                            </li>
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">Native Installers</p>
+                            </li>
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">Email/chat support</p>
+                            </li>
+                        </ul>
+                        <button class="border border-gray-300 px-8 py-3 text-blue-700 hover:border-gray-400 rounded-xl font-medium">
+                            Get Started
+                        </button>
+                    </div>
+            
+                    <!-- Professional Plan -->
+                    <div class="bg-slate-50 border border-xl flex-1 pt-12 pb-8 px-5 flex flex-col gap-4 relative rounded-2xl">
+                        <p class="text-blue-600 bg-indigo-100 rounded-full w-fit px-4 py-1 text-sm top-0 right-5 -translate-y-1/2 font-semibold font-sans absolute">
+                            Most Popular
+                        </p>
+                        <h3 class="text-4xl font-semibold">Professional</h3>
+                        <p class="text-lg text-gray-800 font-poppins">For sophisticated desktop apps.</p>
+                        <p class="text-2xl"><span class="font-semibold professional-price">$300</span>/month</p>
+                        <h6 class="uppercase">Everything in Essential Plus</h6>
+                        <ul >
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">Branded Download links</p>
+                            </li>
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">Analytics</p>
+                            </li>
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">Access to Plugins</p>
+                            </li>
+                            <li class="flex gap-4 items-center">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <p class="text-lg text-gray-600 font-poppins">Access to restricted API</p>
+                            </li>
+                        </ul>
+                        <button class="border px-8 py-3 text-white bg-blue-700 hover:bg-blue-600 rounded-xl font-medium">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
 
              <!-- FAQS -->
               <div id="faq" class="container mt-5">
